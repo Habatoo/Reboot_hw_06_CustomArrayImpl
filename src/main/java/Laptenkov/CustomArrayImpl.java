@@ -191,9 +191,10 @@ public class CustomArrayImpl<T> implements CustomArray<T>  {
         }
 
         // копируем в новый объект оставшуюся часть исходного объекта
-        int remainDataIndex = newSize - lastAddIndex; // индекс с которого продолжается копирование
+        int remainDataIndex = lastAddIndex; // индекс с которого продолжается копирование
+        int oldDataIndex = index; // индекс с которого продолжается копирование старых данных
         for (int i = remainDataIndex; i < newSize; i++) {
-            newData[i] = data[i];
+            newData[i] = data[oldDataIndex++];
         }
 
         data = newData;

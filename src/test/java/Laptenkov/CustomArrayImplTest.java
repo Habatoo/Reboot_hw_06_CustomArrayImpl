@@ -200,7 +200,7 @@ class CustomArrayImplTest {
         Assertions.assertEquals(
                 8, customNotEmptyArray.size());
         Assertions.assertEquals(
-                "[ first second first second null last null null ]", customNotEmptyArray.toString());
+                "[ first second first second third null null last ]", customNotEmptyArray.toString());
     }
 
     /**
